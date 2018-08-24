@@ -6,14 +6,13 @@ const fieldTraceSummary = trace => {
   }
 
   try {
-    const { duration, execution: { resolvers } } = trace
     return R.pipe(
-      R.defaultTo([]),
+      R.pathOr([], ['execution', 'resolvers']),
       R.filter(R.propEq('parentType', 'RootQuery')),
       R.map(resolverFieldSummary),
-      R.prepend(`Total Duration (ms): ${milliseconds(duration)}`),
+      R.prepend(`Total Duration (ms): ${milliseconds(trace.duration)}`),
       R.join(' | ')
-    )(resolvers)
+    )(trace)
   } catch (err) {
     return `Error getting trace summary: ${err.message}`
   }
