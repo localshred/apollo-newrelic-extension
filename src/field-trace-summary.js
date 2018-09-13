@@ -18,7 +18,7 @@ const fieldTraceSummary = trace => {
   }
 }
 
-export const milliseconds = R.divide(R.__, 1000000)
+const milliseconds = R.divide(R.__, 1000000)
 
 const resolverFieldSummary = ({ fieldName, returnType, duration }) =>
   `Field: ${fieldName} - ReturnType: ${returnType} - Duration (ms): ${milliseconds(
