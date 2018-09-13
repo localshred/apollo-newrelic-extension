@@ -1,7 +1,8 @@
 {
   "name": "apollo-newrelic-extension",
-  "version": "0.0.3",
-  "description": "Apollo Server extension library for performing NewRelic transaction traces of graphql requests",
+  "version": "0.1.0",
+  "description":
+    "Apollo Server extension library for performing NewRelic transaction traces of graphql requests",
   "main": "src/index.js",
   "author": "BJ Neilsen",
   "license": "MIT",
