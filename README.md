@@ -3,13 +3,13 @@
 Creates a newrelic transaction with associated custom attributes on each graphql request/response.
 For use with Apollo Server's experimental extensions API only available with Apollo Server >= 2.x.
 
-# Usage (TODO)
+# Usage
 
 1. `yarn add apollo-newrelic-extension`
 2. Enable tracing in your `ApolloServer` configuration.
 3. Connect an extension instance to the `ApolloServer` configuration.
 
-## Example usage
+## Example
 
 ```javascript
 const express = require('express')
