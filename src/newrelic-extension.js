@@ -14,7 +14,7 @@ class NewRelicExtension extends GraphQLExtension {
   }) {
     newrelic.setTransactionName(`graphql (${operationName})`)
     newrelic.addCustomAttribute('gqlQuery', queryString)
-    newrelic.addCustomAttribute('gqlVars', variables)
+    newrelic.addCustomAttribute('gqlVars', JSON.stringify(variables))
     newrelic.addCustomAttribute('persistedQueryHit', persistedQueryHit)
   }
 
